@@ -1,5 +1,5 @@
 {
-	"name": "docmgr",
+	"name": "docmgr-mongodb",
 	"version": "0.0.0",
 	"description": "A persistant document manager. A thin layer over document oriented databases.",
 	"main": "index.js",
