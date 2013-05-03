@@ -12,6 +12,9 @@
 	},
 	"author": "Kaiwalya Kher <knkher@gmail.com>",
 	"license": "Apache 2.0",
+	"dependencies": {
+		"docmgr": "git+https://github.com/kaiwalya/node-docmgr.git#develop"
+	},
 	"devDependencies": {
 		"mocha": "*"
 	}
