@@ -1,0 +1,19 @@
+{
+	"name": "docmgr",
+	"version": "0.0.0",
+	"description": "A persistant document manager. A thin layer over document oriented databases.",
+	"main": "index.js",
+	"scripts": {
+	  "test": "mocha test"
+	},
+	"repository": {
+	  "type": "git",
+	  "url": "https://github.com/kaiwalya/node-docmgr.git"
+	},
+	"author": "Kaiwalya Kher <knkher@gmail.com>",
+	"license": "Apache 2.0",
+	"devDependencies": {
+		"mocha": "*"
+	}
+
+}
