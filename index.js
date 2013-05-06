@@ -48,11 +48,12 @@ PTCollection.prototype.find = function (q, projection, options, callback) {
 		outOptions.fields = projection;
 	}
 	var fo = new docmgr.FindOptions(options);
+	//console.log(q, outOptions);
 	This.coll.find(q, outOptions, function (err, result) {
 		if (err)
 			return callback(err);
 		if (fo.isSingle()) {
-			result.count(function (err, count) {
+			return result.count(function (err, count) {
 				if (count === 0) {
 					return callback();
 				}
@@ -61,12 +62,12 @@ PTCollection.prototype.find = function (q, projection, options, callback) {
 					return cursor.next(callback);
 				}
 				else {
-					callback(new docmgr.OutOfBoundsException());
+					return callback(new docmgr.OutOfBoundsException());
 				}
 			});
 		}
 		else {
-			callback(err, new PTCursor(result));
+			return callback(err, new PTCursor(result));
 		}
 	});
 
