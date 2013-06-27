@@ -76,7 +76,8 @@ PTCollection.prototype.find = function (q, projection, options, callback) {
 
 PTCollection.prototype.remove = function (q, options, callback) {
 	var This = this;
-	return This.coll.remove(q, options, callback);
+	var opt = {w: 1};
+	return This.coll.remove(q, opt, callback);
 };
 
 PTDB.prototype.collection = function (docType, callback) {
